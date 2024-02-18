@@ -6,7 +6,7 @@ function saludar(){
 function despedir(){
     alert("Adiós");
     emoji();
-};
+}
 
 function emoji(){
     alert(";-)");
