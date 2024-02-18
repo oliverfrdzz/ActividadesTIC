@@ -1,71 +1,23 @@
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
-</head>
-<body>
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="Actividad 8, por Oliver Hayes">
-  <title>Saludo según la hora</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad8</title>
+    <script src="script.js"></script>
 </head>
 <body>
+    <h1>Actividad 8</h1>
 
-<button onclick="MensajeSwitch()">Mensaje con Switch</button>
-<button onclick="MensajeIf()">Mensaje con If</button>
+    <label for="hora">Hora: </label>
+    <input type="text" id="hora" name="hora"/>
+    <br/><br/>
 
-<script>
-function MensajeSwitch() {
-  // Solicitar al usuario introducir la hora
-  let hora = prompt("Introduce la hora (número):");
+    <button onclick="MensajeIf()">Mensaje If</button>
+    <button onclick="MensajeSwitch()">Mensaje Switch</button>
+    <br/><br/>
 
-  // Convertir la hora a un número entero
-  hora = parseInt(hora);
-
-  // Verificar si la hora es válida
-  if (!isNaN(hora) && hora >= 0 && hora <= 24) {
-    // Determinar el saludo según la hora usando switch
-    switch (true) {
-      case hora >= 7 && hora <= 11:
-        alert("Buenos días");
-        break;
-      case hora >= 12 && hora <= 21:
-        alert("Buenas tardes");
-        break;
-      default:
-        alert("Buenas noches");
-    }
-  } else {
-    // Mostrar mensaje de error si la hora no es válida
-    alert("Error: Introduce una hora válida (0-24).");
-  }
-}
-
-function MensajeIf() {
-  // Solicitar al usuario introducir la hora
-  let hora = prompt("Introduce la hora (número):");
-
-  // Convertir la hora a un número entero
-  hora = parseInt(hora);
-
-  // Verificar si la hora es válida
-  if (!isNaN(hora) && hora >= 0 && hora <= 24) {
-    // Determinar el saludo según la hora usando if-else
-    if (hora >= 7 && hora <= 11) {
-      alert("Buenos días");
-    } else if (hora >= 12 && hora <= 21) {
-      alert("Buenas tardes");
-    } else {
-      alert("Buenas noches");
-    }
-  } else {
-    // Mostrar mensaje de error si la hora no es válida
-    alert("Error: Introduce una hora válida (0-24).");
-  }
-}
-</script>
-
+    <p id="result"></p>
+    
 </body>
 </html>
