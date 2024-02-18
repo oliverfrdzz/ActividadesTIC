@@ -1,44 +1,22 @@
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="Actividad 7, por Oliver Hayes">
-  <title>Comprobar Calificación</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad7</title>
+    <script src="script.js"></script>
 </head>
 <body>
 
-<label for="calificacionInput">Ingrese su calificación (0-10):</label>
-<input type="number" id="calificacionInput">
-
-<button onclick="comprobar()">Comprobar</button>
-
-<p id="resultado"></p>
-
-<script>
-function comprobar() {
-  // Obtener el valor del cuadro de texto
-  let calificacion = document.getElementById("calificacionInput").value;
-
-  // Convertir el valor a un número
-  calificacion = parseFloat(calificacion);
-
-  // Comprobar si la calificación está en el rango de 0 a 10
-  if (!isNaN(calificacion) && calificacion >= 0 && calificacion <= 10) {
-    // Determinar si la calificación es aprobada o suspendida
-    if (calificacion >= 5) {
-      document.getElementById("resultado").textContent = "Aprobado";
-    } else {
-      document.getElementById("resultado").textContent = "Suspenso";
-    }
-  } else {
-    // Mostrar un mensaje si la calificación no es válida
-    document.getElementById("resultado").textContent = "La nota que has puesto no es válida.";
-  }
-}
-</script>
-
+    <h1>Actividad 7</h1>
+    <p>Introduzca su calificación</p>
+    <label for="nota">Calificación: </label>
+    <input type="text" id="nota" name="nota"/>
+    <br/><br/>
+    <button onclick="comprobar()">Resultado</button>
+    <br/><br/>
+    <p id="resultado"></p>
+    
+    
 </body>
 </html>
