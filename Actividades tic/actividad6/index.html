@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="Actividad 6, por Oliver Hayes">
-  <title>Comprobar Par o Impar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad6</title>
+    <script src="script.js"></script>
 </head>
 <body>
 
-<label for="numeroInput">Ingrese un número:</label>
-<input type="number" id="numeroInput">
+    <h1>Actividad 6</h1>
 
-<button onclick="comprobar()">Comprobar</button>
+    <p>Introduce un número</p>
 
-<p id="resultado"></p>
+    <label for="num">Número: </label>
+    <input type="number" id="num" name="num"/>
+    <br/><br/>
 
-<script>
-function comprobar() {
-  // Obtener el valor del cuadro de texto
-  let numero = document.getElementById("numeroInput").value;
+    <button onclick="comprobar()">Comprobar</button>
+    <br/><br/>
 
-  // Convertir el valor a un número entero
-  numero = parseInt(numero);
+    <p id="resultado"></p>
 
-  // Comprobar si el número es par o impar utilizando el operador módulo
-  if (numero % 2 === 0) {
-    document.getElementById("resultado").textContent = "El número " + num
+</body>
+</html>
